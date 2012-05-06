@@ -1,0 +1,186 @@
+// !$*UTF8*$!
+{
+	1D3623250D0F684500981E51 /* zenAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 1196}}";
+			sepNavSelRange = "{813, 0}";
+			sepNavVisRange = "{448, 883}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* zen */ = {
+		activeExec = 0;
+		executables = (
+			A0C239651542C08D002628CA /* zen */,
+		);
+	};
+	28D7ACF60DDB3853001CB0EB /* zenViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {439, 338}}";
+			sepNavSelRange = "{454, 0}";
+			sepNavVisRange = "{38, 345}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* zenViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1248}}";
+			sepNavSelRange = "{1818, 0}";
+			sepNavVisRange = "{1606, 719}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = A0C239651542C08D002628CA /* zen */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* zen */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* zen */,
+		);
+		codeSenseManager = A0C239711542C0A6002628CA /* Code sense */;
+		executables = (
+			A0C239651542C08D002628CA /* zen */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					577,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					537,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 356706097;
+			PBXWorkspaceStateSaveDate = 356706097;
+		};
+		perUserProjectItems = {
+			A0C23A0A1542D6F2002628CA /* PBXTextBookmark */ = A0C23A0A1542D6F2002628CA /* PBXTextBookmark */;
+			A0C23A191542DC52002628CA /* PBXTextBookmark */ = A0C23A191542DC52002628CA /* PBXTextBookmark */;
+			A0D9D6971542E8FD003B3415 /* PBXTextBookmark */ = A0D9D6971542E8FD003B3415 /* PBXTextBookmark */;
+			A0D9D6981542E8FD003B3415 /* PBXTextBookmark */ = A0D9D6981542E8FD003B3415 /* PBXTextBookmark */;
+		};
+		sourceControlManager = A0C239701542C0A6002628CA /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D1107310486CEB800E47090 /* zen-Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{227, 65}, {750, 550}}";
+		};
+	};
+	A0C239651542C08D002628CA /* zen */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = zen;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	A0C239701542C0A6002628CA /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	A0C239711542C0A6002628CA /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	A0C23A0A1542D6F2002628CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* zenViewController.h */;
+		name = "zenViewController.h: 10";
+		rLen = 0;
+		rLoc = 206;
+		rType = 0;
+		vrLen = 397;
+		vrLoc = 141;
+	};
+	A0C23A191542DC52002628CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* zenAppDelegate.m */;
+		name = "zenAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 985;
+		vrLoc = 656;
+	};
+	A0D9D6971542E8FD003B3415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* zenViewController.m */;
+		name = "zenViewController.m: 73";
+		rLen = 0;
+		rLoc = 1818;
+		rType = 0;
+		vrLen = 719;
+		vrLoc = 1606;
+	};
+	A0D9D6981542E8FD003B3415 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* zenAppDelegate.m */;
+		name = "zenAppDelegate.m: 32";
+		rLen = 0;
+		rLoc = 813;
+		rType = 0;
+		vrLen = 883;
+		vrLoc = 448;
+	};
+}
