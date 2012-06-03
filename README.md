@@ -1,2 +1,1 @@
-thezenapp
-=========
+The Zen App is everything and the Zen App is nothing.
