@@ -11,14 +11,23 @@
 
 @implementation zenViewController
 
-
 AVAudioPlayer *audioPlayer;
-int start;
+int start_time;
+double start_accel[3] = {0.0, 0.0, 0.0};
 NSString *formatted_last_zen_time = nil;
 bool timing = FALSE;
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 	[self end_zen_if_timing];
+}
+
+- (void) accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
+    double x = acceleration.x; double y = acceleration.y; double z = acceleration.z;
+    if (0.0 == start_accel[0] && 0.0 == start_accel[1] && 0.0 == start_accel[2]) {
+        start_accel[0] = x; start_accel[1] = y; start_accel[2] = z;
+    } else if ([self moved:x :y :z]) {
+	    [self end_zen_if_timing];
+    }
 }
 
 - (IBAction) restart:(id) sender {
@@ -51,6 +60,13 @@ bool timing = FALSE;
     [self end_zen_if_timing];
 }
 
+- (bool) moved:(double) x :(double) y :(double) z {
+    //NSLog(@"start: %g, %g, %g; now: %g, %g, %g", start_accel[0], start_accel[1], start_accel[2], x, y, z);
+    return (fabs(x - start_accel[0]) > 0.2 || 
+            fabs(y - start_accel[1]) > 0.2 || 
+            fabs(z - start_accel[2]) > 0.2);
+}
+
 - (int) time_since:(int) start_time {
 	int now = [[NSDate date] timeIntervalSince1970];
 	return now - start_time;
@@ -58,7 +74,7 @@ bool timing = FALSE;
 
 - (void) record_zen_time {
     [formatted_last_zen_time release];
-    int zen_time_in_seconds = [self time_since:start];
+    int zen_time_in_seconds = [self time_since:start_time];
 	formatted_last_zen_time = [[NSString alloc] initWithFormat:@"%02d:%02d", zen_time_in_seconds/60, zen_time_in_seconds%60];
 }
 
@@ -68,7 +84,8 @@ bool timing = FALSE;
     [tweetButton   setHidden:YES];
 	if (audioPlayer != nil) { audioPlayer.currentTime = 0; [audioPlayer play]; }
 	timing = TRUE;
-	start = [[NSDate date] timeIntervalSince1970];
+	start_time = [[NSDate date] timeIntervalSince1970];
+    start_accel[0] = start_accel[1] = start_accel[2] = 0;
 }
 
 - (void) end_zen_if_timing {
@@ -82,26 +99,10 @@ bool timing = FALSE;
     }
 }
 
-/*
-// The designated initializer. Override to perform setup that is required before the view is loaded.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-}
-*/
-
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+    [[UIAccelerometer sharedAccelerometer] setUpdateInterval:1.0/30.0];
+    [[UIAccelerometer sharedAccelerometer] setDelegate:self];
+    
     [super viewDidLoad];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
@@ -117,25 +118,12 @@ bool timing = FALSE;
 	[self reset];
 }
 
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return YES;
-}
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation { return YES; }
 
-- (void)didReceiveMemoryWarning {
-	// Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-	
-	// Release any cached data, images, etc that aren't in use.
-}
+- (void)viewDidUnload { [self end_zen_if_timing]; }
 
-- (void)viewDidUnload {
-	[self end_zen_if_timing];
-}
-
-- (void)dealloc {
-    [super dealloc];
-}
+//////// HOUSEKEEPING REQUIRED BY APPLE
+- (void)didReceiveMemoryWarning { [super didReceiveMemoryWarning]; }
+- (void)dealloc { [super dealloc]; }
 
 @end

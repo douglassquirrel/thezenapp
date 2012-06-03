@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface zenViewController : UIViewController {
+@interface zenViewController : UIViewController <UIAccelerometerDelegate> {
 	IBOutlet UILabel *timerOutput;
 	IBOutlet UIButton *restartButton;
 	IBOutlet UIButton *tweetButton;
