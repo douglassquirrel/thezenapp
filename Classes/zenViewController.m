@@ -17,7 +17,36 @@ double start_accel[3] = {0.0, 0.0, 0.0};
 NSString *formatted_last_zen_time = nil;
 bool timing = FALSE;
 
-- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (FALSE == timing) { return; }
+    
+    [touches enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+        UITouch *touch = obj;
+        CGPoint touchPoint = [touch locationInView:self.view];
+        
+        UIView *touchView = [[UIView alloc] init];
+        touchView.tag = 314;
+        [touchView setBackgroundColor:[UIColor colorWithRed:0.95 green:0.95 blue:0.5 alpha:0.5]];
+        touchView.frame = CGRectMake(touchPoint.x-75, touchPoint.y-75, 150, 150);
+        touchView.layer.cornerRadius = 75;
+        [self.view addSubview:touchView];
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:1];
+        touchView.alpha = 0.0f;
+        [UIView commitAnimations];
+        [touchView release];
+    }];
+}
+
+- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+	[self end_zen_if_timing];
+}
+
+//- (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+//	[self end_zen_if_timing];
+//}
+
+- (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
 	[self end_zen_if_timing];
 }
 
@@ -61,7 +90,6 @@ bool timing = FALSE;
 }
 
 - (bool) moved:(double) x :(double) y :(double) z {
-    //NSLog(@"start: %g, %g, %g; now: %g, %g, %g", start_accel[0], start_accel[1], start_accel[2], x, y, z);
     return (fabs(x - start_accel[0]) > 0.2 || 
             fabs(y - start_accel[1]) > 0.2 || 
             fabs(z - start_accel[2]) > 0.2);
@@ -78,6 +106,14 @@ bool timing = FALSE;
 	formatted_last_zen_time = [[NSString alloc] initWithFormat:@"%02d:%02d", zen_time_in_seconds/60, zen_time_in_seconds%60];
 }
 
+- (void) remove_touch_circles {
+    NSArray *subviews = [self.view subviews];
+    for (UIView *view in subviews) {
+        if (314 == view.tag) {
+            [view removeFromSuperview];
+        }
+    }
+}
 - (void) reset {
 	timerOutput.text = @"";
 	[restartButton setHidden:YES];
@@ -86,6 +122,7 @@ bool timing = FALSE;
 	timing = TRUE;
 	start_time = [[NSDate date] timeIntervalSince1970];
     start_accel[0] = start_accel[1] = start_accel[2] = 0;
+    [self remove_touch_circles];
 }
 
 - (void) end_zen_if_timing {
@@ -114,6 +151,8 @@ bool timing = FALSE;
 	NSError *error;
 	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
 	audioPlayer.numberOfLoops = -1;
+    
+    [self.view setMultipleTouchEnabled:YES];
 	
 	[self reset];
 }
