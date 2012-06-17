@@ -6,7 +6,9 @@
 //  Copyright 2012 TheZenApp, Ltd. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
+#import "Colourist.h"
 #import "MotionDetector.h"
 #import "Signaller.h"
 #import "Sound.h"
@@ -23,6 +25,7 @@
 	IBOutlet UIButton *tweetButton;
 
     @private
+    Colourist *colourist;
     MotionDetector *motionDetector;
     Signaller *signaller;
     Sound *sound;

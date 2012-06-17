@@ -8,6 +8,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
+#import "Colourist.h"
 #import "ZenningListener.h"
 
 @interface TouchSensor : NSObject <ZenningListener>
@@ -15,8 +16,10 @@
 {
     @private
     BOOL sensitised;
+    Colourist *colourist;
 }
 
+-(id) init:(Colourist *) theColourist;
 -(void) process:(NSSet *)touches forView:(UIView *)view;
 -(void) becomingZen;
 -(void) returningFromZen;

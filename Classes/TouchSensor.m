@@ -13,9 +13,9 @@ static int const RADIUS = 75;
 
 @implementation TouchSensor
 
--(id) init 
-{
+-(id) init:(Colourist *) theColourist {
     if (!(self = [super init])) { return nil; }
+    colourist = theColourist;
     return self;
 }
 
@@ -36,7 +36,7 @@ static int const RADIUS = 75;
 {
     UIView *circle = [[UIView alloc] init];
     circle.tag = TEMPORARY_TAG; 
-    [circle setBackgroundColor:[UIColor colorWithRed:0.95 green:0.95 blue:0.5 alpha:0.5]];
+    [colourist applyColoursTo:circle];
     circle.frame = CGRectMake(centre->x-RADIUS, centre->y-RADIUS, RADIUS*2, RADIUS*2);
     circle.layer.cornerRadius = RADIUS;
     return circle;

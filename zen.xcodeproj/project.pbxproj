@@ -15,6 +15,7 @@
 		2899E5220DE3E06400AC0155 /* zenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* zenViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* zenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* zenViewController.m */; };
+		790BF123158DD14E0038321B /* Colourist.m in Sources */ = {isa = PBXBuildFile; fileRef = 790BF122158DD14E0038321B /* Colourist.m */; };
 		79528549158BD6F70094E203 /* Signaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 79528548158BD6F70094E203 /* Signaller.m */; };
 		7993B611158D04F10082E6DC /* MotionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993B610158D04F10082E6DC /* MotionDetector.m */; };
 		7993B615158D10F10082E6DC /* VisibilitySwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993B614158D10F10082E6DC /* VisibilitySwitch.m */; };
@@ -44,9 +45,12 @@
 		28D7ACF70DDB3853001CB0EB /* zenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zenViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* zen_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zen_Prefix.pch; sourceTree = "<group>"; };
+		790BF121158DD14E0038321B /* Colourist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colourist.h; sourceTree = "<group>"; };
+		790BF122158DD14E0038321B /* Colourist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colourist.m; sourceTree = "<group>"; };
+		794FF990158D723E0028B54E /* ZenningListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenningListener.h; sourceTree = "<group>"; };
 		79528547158BD6F70094E203 /* Signaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signaller.h; sourceTree = "<group>"; };
 		79528548158BD6F70094E203 /* Signaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Signaller.m; sourceTree = "<group>"; };
-		7993B60F158D04F10082E6DC /* MotionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MotionDetector.h; sourceTree = "<group>"; };
+		7993B60F158D04F10082E6DC /* MotionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionDetector.h; sourceTree = "<group>"; };
 		7993B610158D04F10082E6DC /* MotionDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionDetector.m; sourceTree = "<group>"; };
 		7993B613158D10F10082E6DC /* VisibilitySwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisibilitySwitch.h; sourceTree = "<group>"; };
 		7993B614158D10F10082E6DC /* VisibilitySwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisibilitySwitch.m; sourceTree = "<group>"; };
@@ -61,7 +65,6 @@
 		7993B621158D50F50082E6DC /* Vector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector.m; sourceTree = "<group>"; };
 		79B79AFA158C79FF005421B5 /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
 		79B79AFB158C79FF005421B5 /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
-		79B79B02158CFC98005421B5 /* ZenningListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZenningListener.h; path = ../ZenningListener.h; sourceTree = "<group>"; };
 		79B79B03158CFF80005421B5 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		79B79B04158CFF80005421B5 /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
 		79EB97801556B2630025F397 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -92,11 +95,13 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				79B79B02158CFC98005421B5 /* ZenningListener.h */,
+				794FF990158D723E0028B54E /* ZenningListener.h */,
 				1D3623240D0F684500981E51 /* zenAppDelegate.h */,
 				1D3623250D0F684500981E51 /* zenAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* zenViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* zenViewController.m */,
+				790BF121158DD14E0038321B /* Colourist.h */,
+				790BF122158DD14E0038321B /* Colourist.m */,
 				7993B61D158D3C560082E6DC /* TouchSensor.h */,
 				7993B61E158D3C560082E6DC /* TouchSensor.m */,
 				7993B61A158D340B0082E6DC /* Tweeter.h */,
@@ -253,6 +258,7 @@
 				7993B61C158D340B0082E6DC /* Tweeter.m in Sources */,
 				7993B61F158D3C560082E6DC /* TouchSensor.m in Sources */,
 				7993B622158D50F50082E6DC /* Vector.m in Sources */,
+				790BF123158DD14E0038321B /* Colourist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
