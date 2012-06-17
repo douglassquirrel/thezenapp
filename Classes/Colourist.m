@@ -15,10 +15,57 @@ static int const TEMPORARY_TAG = 314;
 -(id) init 
 {
     if (!(self = [super init])) { return nil; }
-    [self doColoursWithBase: [UIColor colorWithRed:1.0 green:0.431 blue:0.718 alpha:0.18]];
+    
+    [self registerColourDefault];
+    UIColor *startColour = [self getPreferredColour];
+    
+    [self doColoursWithBase: startColour];
     return self;
 }
 
+-(void) registerColourDefault
+{
+    NSDictionary *defaultBaseColour = [self serialize:[UIColor colorWithHue:0.0 saturation:0.0 brightness:1.0 alpha:1.0]];
+    NSDictionary *newDefault = [NSDictionary dictionaryWithObjectsAndKeys:defaultBaseColour, @"baseColour", nil];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults registerDefaults:newDefault];
+    [defaults synchronize];
+    NSLog(@"baseColour stored as: %@", [defaults objectForKey:@"baseColour"]);
+}
+
+-(UIColor *) getPreferredColour
+{
+    return [self deserialize:[[NSUserDefaults standardUserDefaults] dictionaryForKey:@"baseColour"]];
+}
+
+-(void) updatePreferredColour:(UIColor *)colour {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *serializedColour = [self serialize:colour];
+    [defaults setObject:serializedColour forKey:@"baseColour"];
+    [defaults synchronize];
+}
+
+-(NSDictionary *) serialize: (UIColor *)colour
+{
+    CGFloat hue, saturation, brightness, alpha;
+    [colour getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
+    
+    return [NSDictionary dictionaryWithObjectsAndKeys:
+                [NSNumber numberWithDouble:hue],        @"hue", 
+                [NSNumber numberWithDouble:saturation], @"saturation",
+                [NSNumber numberWithDouble:brightness], @"brightness",
+                [NSNumber numberWithDouble:alpha],      @"alpha",      nil];
+}
+
+-(UIColor *) deserialize: (NSDictionary *)serializedColour {    
+    float hue        = [(NSNumber *)[serializedColour objectForKey:@"hue"]        floatValue];
+    float saturation = [(NSNumber *)[serializedColour objectForKey:@"saturation"] floatValue];
+    float brightness = [(NSNumber *)[serializedColour objectForKey:@"brightness"] floatValue];
+    float alpha      = [(NSNumber *)[serializedColour objectForKey:@"alpha"]      floatValue];
+    
+    return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha];
+}
+     
 -(void) doColoursWithBase: (UIColor *)theBaseColour
 {
     [baseColour release]; [textColour release]; [highlightedColour release]; [fadingColour release];
@@ -28,6 +75,8 @@ static int const TEMPORARY_TAG = 314;
     UIColor *complement = [self complementOf: baseColour];
     highlightedColour = [self opaqueVersionOf: complement];
     fadingColour = complement;
+    
+    [self updatePreferredColour:baseColour];
     
     [baseColour retain]; [textColour retain]; [highlightedColour retain]; [fadingColour retain];
 }
@@ -69,7 +118,11 @@ static int const TEMPORARY_TAG = 314;
     CGFloat hue, saturation, brightness, alpha;
     [colour getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha]; 
     
-    hue += 0.5; if (hue > 1.0) { hue -= 1.0; }
+    if (brightness < 0.05 || brightness > 0.95) {
+        hue=saturation=brightness=0.5;
+    } else {
+        hue += 0.5; if (hue > 1.0) { hue -= 1.0; }
+    }
     
     return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha];
 }
@@ -81,12 +134,6 @@ static int const TEMPORARY_TAG = 314;
     [colour getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
     
     return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1.0];
-}
-
--(void) logColour:(UIColor *) color 
-{
-    const CGFloat *components = CGColorGetComponents(color.CGColor);
-    NSLog(@"Color components: %f,%f,%f,%f", components[0], components[1], components[2], components[3]);
 }
 
 -(void) dealloc {

@@ -16,6 +16,10 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* zenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* zenViewController.m */; };
 		790BF123158DD14E0038321B /* Colourist.m in Sources */ = {isa = PBXBuildFile; fileRef = 790BF122158DD14E0038321B /* Colourist.m */; };
+		790BF12A158E0AC30038321B /* ColourPickerImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 790BF129158E0AC30038321B /* ColourPickerImage.jpg */; };
+		790BF12C158E0AE00038321B /* ColourPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 790BF12B158E0AE00038321B /* ColourPicker.xib */; };
+		790BF12F158E0B610038321B /* ColourPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 790BF12E158E0B610038321B /* ColourPickerViewController.m */; };
+		790BF138158E23440038321B /* ColorPickerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 790BF137158E23440038321B /* ColorPickerImageView.m */; };
 		79528549158BD6F70094E203 /* Signaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 79528548158BD6F70094E203 /* Signaller.m */; };
 		7993B611158D04F10082E6DC /* MotionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993B610158D04F10082E6DC /* MotionDetector.m */; };
 		7993B615158D10F10082E6DC /* VisibilitySwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993B614158D10F10082E6DC /* VisibilitySwitch.m */; };
@@ -47,6 +51,12 @@
 		32CA4F630368D1EE00C91783 /* zen_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zen_Prefix.pch; sourceTree = "<group>"; };
 		790BF121158DD14E0038321B /* Colourist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colourist.h; sourceTree = "<group>"; };
 		790BF122158DD14E0038321B /* Colourist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colourist.m; sourceTree = "<group>"; };
+		790BF129158E0AC30038321B /* ColourPickerImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ColourPickerImage.jpg; sourceTree = "<group>"; };
+		790BF12B158E0AE00038321B /* ColourPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColourPicker.xib; sourceTree = "<group>"; };
+		790BF12D158E0B610038321B /* ColourPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColourPickerViewController.h; sourceTree = "<group>"; };
+		790BF12E158E0B610038321B /* ColourPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColourPickerViewController.m; sourceTree = "<group>"; };
+		790BF136158E23440038321B /* ColorPickerImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerImageView.h; sourceTree = "<group>"; };
+		790BF137158E23440038321B /* ColorPickerImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerImageView.m; sourceTree = "<group>"; };
 		794FF990158D723E0028B54E /* ZenningListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenningListener.h; sourceTree = "<group>"; };
 		79528547158BD6F70094E203 /* Signaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signaller.h; sourceTree = "<group>"; };
 		79528548158BD6F70094E203 /* Signaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Signaller.m; sourceTree = "<group>"; };
@@ -95,32 +105,36 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				794FF990158D723E0028B54E /* ZenningListener.h */,
-				1D3623240D0F684500981E51 /* zenAppDelegate.h */,
-				1D3623250D0F684500981E51 /* zenAppDelegate.m */,
-				28D7ACF60DDB3853001CB0EB /* zenViewController.h */,
-				28D7ACF70DDB3853001CB0EB /* zenViewController.m */,
 				790BF121158DD14E0038321B /* Colourist.h */,
 				790BF122158DD14E0038321B /* Colourist.m */,
+				790BF136158E23440038321B /* ColorPickerImageView.h */,
+				790BF137158E23440038321B /* ColorPickerImageView.m */,
+				790BF12D158E0B610038321B /* ColourPickerViewController.h */,
+				790BF12E158E0B610038321B /* ColourPickerViewController.m */,
+				7993B60F158D04F10082E6DC /* MotionDetector.h */,
+				7993B610158D04F10082E6DC /* MotionDetector.m */,
+				79528547158BD6F70094E203 /* Signaller.h */,
+				79528548158BD6F70094E203 /* Signaller.m */,
+				79B79AFA158C79FF005421B5 /* Sound.h */,
+				79B79AFB158C79FF005421B5 /* Sound.m */,
+				79B79B03158CFF80005421B5 /* Timer.h */,
+				79B79B04158CFF80005421B5 /* Timer.m */,
+				7993B616158D23FE0082E6DC /* TimerListener.h */,
 				7993B61D158D3C560082E6DC /* TouchSensor.h */,
 				7993B61E158D3C560082E6DC /* TouchSensor.m */,
 				7993B61A158D340B0082E6DC /* Tweeter.h */,
 				7993B61B158D340B0082E6DC /* Tweeter.m */,
-				7993B616158D23FE0082E6DC /* TimerListener.h */,
-				7993B617158D258B0082E6DC /* VisibleTimer.h */,
-				7993B618158D258B0082E6DC /* VisibleTimer.m */,
-				7993B613158D10F10082E6DC /* VisibilitySwitch.h */,
-				7993B614158D10F10082E6DC /* VisibilitySwitch.m */,
-				7993B60F158D04F10082E6DC /* MotionDetector.h */,
-				7993B610158D04F10082E6DC /* MotionDetector.m */,
 				7993B620158D50F50082E6DC /* Vector.h */,
 				7993B621158D50F50082E6DC /* Vector.m */,
-				79B79B03158CFF80005421B5 /* Timer.h */,
-				79B79B04158CFF80005421B5 /* Timer.m */,
-				79B79AFA158C79FF005421B5 /* Sound.h */,
-				79B79AFB158C79FF005421B5 /* Sound.m */,
-				79528547158BD6F70094E203 /* Signaller.h */,
-				79528548158BD6F70094E203 /* Signaller.m */,
+				7993B613158D10F10082E6DC /* VisibilitySwitch.h */,
+				7993B614158D10F10082E6DC /* VisibilitySwitch.m */,
+				7993B617158D258B0082E6DC /* VisibleTimer.h */,
+				7993B618158D258B0082E6DC /* VisibleTimer.m */,
+				1D3623240D0F684500981E51 /* zenAppDelegate.h */,
+				1D3623250D0F684500981E51 /* zenAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* zenViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* zenViewController.m */,
+				794FF990158D723E0028B54E /* ZenningListener.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -160,11 +174,13 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				790BF12B158E0AE00038321B /* ColourPicker.xib */,
+				790BF129158E0AC30038321B /* ColourPickerImage.jpg */,
 				79EB97801556B2630025F397 /* Icon.png */,
-				A0C23A061542D6A0002628CA /* waves.mp3 */,
-				2899E5210DE3E06400AC0155 /* zenViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				A0C23A061542D6A0002628CA /* waves.mp3 */,
 				8D1107310486CEB800E47090 /* zen-Info.plist */,
+				2899E5210DE3E06400AC0155 /* zenViewController.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -236,6 +252,8 @@
 				2899E5220DE3E06400AC0155 /* zenViewController.xib in Resources */,
 				A0C23A071542D6A0002628CA /* waves.mp3 in Resources */,
 				79EB97811556B2630025F397 /* Icon.png in Resources */,
+				790BF12A158E0AC30038321B /* ColourPickerImage.jpg in Resources */,
+				790BF12C158E0AE00038321B /* ColourPicker.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +277,8 @@
 				7993B61F158D3C560082E6DC /* TouchSensor.m in Sources */,
 				7993B622158D50F50082E6DC /* Vector.m in Sources */,
 				790BF123158DD14E0038321B /* Colourist.m in Sources */,
+				790BF12F158E0B610038321B /* ColourPickerViewController.m in Sources */,
+				790BF138158E23440038321B /* ColorPickerImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

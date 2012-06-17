@@ -12,10 +12,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"The Zen App";
 
     [self assemble];
     
     [self configureButtons];
+    [self createViews];
 
     [self.view setMultipleTouchEnabled:YES];    
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopping:) name:UIApplicationWillResignActiveNotification object:nil];
@@ -59,18 +62,41 @@
     }
 }
 
+-(void) createViews {
+    colourPickerView = [[ColourPickerViewController alloc] initWithNibName:@"ColourPicker" bundle:[NSBundle mainBundle]];
+    colourPickerView.delegate = self;
+}
+
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event     { [touchSensor process:touches forView:self.view]; }
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event     { [signaller returnFromZen]; }
 - (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event { [signaller returnFromZen]; }
 //- (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event   { [signaller returnFromZen];}
 
-- (IBAction) zenAgain:(id) sender { [signaller becomeZen]; }
+- (IBAction) colours:(id)sender   { 
+    UINavigationController *navigationController = [[UINavigationController alloc]
+                                                    initWithRootViewController:colourPickerView];
+    [self presentViewController:navigationController animated:YES completion: nil];
+}
+
 - (IBAction) tweet:(id) sender    { [tweeter tweet];       }
+- (IBAction) zenAgain:(id) sender { [signaller becomeZen]; }
+
+-(void)pickedColour:(UIColor *) color;
+{
+    [self dismissModalViewControllerAnimated:YES];
+
+    if (nil == color) { return; }
+    [colourist doColoursWithBase:color];
+    [colourist applyColoursTo:[self view]];
+}
 
 - (void) stopping:(NSNotification *) notification { [signaller returnFromZen]; }
-- (void) viewDidUnload                            {
+
+- (void) viewDidUnload                         
+{
     [signaller returnFromZen]; 
     
+    [colourPickerView release];
     [motionDetector release];
     [signaller release];
     [sound release];
@@ -82,9 +108,5 @@
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation { return YES; }
-
-//////// HOUSEKEEPING REQUIRED BY APPLE
-- (void)didReceiveMemoryWarning { [super didReceiveMemoryWarning]; }
-- (void)dealloc { [super dealloc]; }
 
 @end

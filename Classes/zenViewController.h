@@ -8,6 +8,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
+#import "ColourPickerViewController.h"
 #import "Colourist.h"
 #import "MotionDetector.h"
 #import "Signaller.h"
@@ -18,11 +19,12 @@
 #import "VisibilitySwitch.h"
 #import "VisibleTimer.h"
 
-@interface zenViewController : UIViewController 
+@interface zenViewController : UIViewController <ColourPickerDelegate>
 {
 	IBOutlet UILabel *timerOutput;
 	IBOutlet UIButton *restartButton;
 	IBOutlet UIButton *tweetButton;
+    ColourPickerViewController *colourPickerView;
 
     @private
     Colourist *colourist;
@@ -36,8 +38,9 @@
     VisibleTimer *visibleTimer;
 }
 
-- (IBAction) zenAgain:(id) sender;
+- (IBAction) colours:(id) sender;
 - (IBAction) tweet:(id) sender;
+- (IBAction) zenAgain:(id) sender;
 
 @end
 

@@ -20,6 +20,7 @@
 }
 
 -(id) init;
+-(void) doColoursWithBase: (UIColor *)theBaseColour;
 -(void) applyColoursTo:(UIView *) view;
 
 @end

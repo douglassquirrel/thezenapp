@@ -14,7 +14,6 @@
 @synthesize window;
 @synthesize viewController;
 
-
 #pragma mark -
 #pragma mark Application lifecycle
 
@@ -27,6 +26,8 @@
     [self.window makeKeyAndVisible];
 
 	[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];	
+    
+    
 
     return YES;
 }
