@@ -7,15 +7,33 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
+#import "MotionDetector.h"
+#import "Signaller.h"
+#import "Sound.h"
+#import "Timer.h"
+#import "TouchSensor.h"
+#import "Tweeter.h"
+#import "VisibilitySwitch.h"
+#import "VisibleTimer.h"
 
-@interface zenViewController : UIViewController <UIAccelerometerDelegate> {
+@interface zenViewController : UIViewController 
+{
 	IBOutlet UILabel *timerOutput;
 	IBOutlet UIButton *restartButton;
 	IBOutlet UIButton *tweetButton;
+
+    @private
+    MotionDetector *motionDetector;
+    Signaller *signaller;
+    Sound *sound;
+    Timer *timer;
+    TouchSensor *touchSensor;
+    Tweeter *tweeter;
+    VisibilitySwitch *visibilitySwitch;
+    VisibleTimer *visibleTimer;
 }
 
-- (IBAction) restart:(id) sender;
+- (IBAction) zenAgain:(id) sender;
 - (IBAction) tweet:(id) sender;
 
 @end
