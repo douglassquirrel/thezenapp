@@ -22,6 +22,11 @@
     image.pickedColorDelegate = self;
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    self.navigationController.navigationBarHidden = YES;
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
