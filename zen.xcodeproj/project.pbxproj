@@ -27,6 +27,7 @@
 		7993B61C158D340B0082E6DC /* Tweeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993B61B158D340B0082E6DC /* Tweeter.m */; };
 		7993B61F158D3C560082E6DC /* TouchSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993B61E158D3C560082E6DC /* TouchSensor.m */; };
 		7993B622158D50F50082E6DC /* Vector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993B621158D50F50082E6DC /* Vector.m */; };
+		79B1AA18158E6DC10093B460 /* ColourPickerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 79B1AA17158E6DC10093B460 /* ColourPickerImage.png */; };
 		79B79AFC158C79FF005421B5 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B79AFB158C79FF005421B5 /* Sound.m */; };
 		79B79B05158CFF80005421B5 /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B79B04158CFF80005421B5 /* Timer.m */; };
 		79EB97811556B2630025F397 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 79EB97801556B2630025F397 /* Icon.png */; };
@@ -73,6 +74,7 @@
 		7993B61E158D3C560082E6DC /* TouchSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchSensor.m; sourceTree = "<group>"; };
 		7993B620158D50F50082E6DC /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
 		7993B621158D50F50082E6DC /* Vector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector.m; sourceTree = "<group>"; };
+		79B1AA17158E6DC10093B460 /* ColourPickerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColourPickerImage.png; sourceTree = "<group>"; };
 		79B79AFA158C79FF005421B5 /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
 		79B79AFB158C79FF005421B5 /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
 		79B79B03158CFF80005421B5 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				790BF12B158E0AE00038321B /* ColourPicker.xib */,
+				79B1AA17158E6DC10093B460 /* ColourPickerImage.png */,
 				790BF129158E0AC30038321B /* ColourPickerImage.jpg */,
 				79EB97801556B2630025F397 /* Icon.png */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
@@ -254,6 +257,7 @@
 				79EB97811556B2630025F397 /* Icon.png in Resources */,
 				790BF12A158E0AC30038321B /* ColourPickerImage.jpg in Resources */,
 				790BF12C158E0AE00038321B /* ColourPicker.xib in Resources */,
+				79B1AA18158E6DC10093B460 /* ColourPickerImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
