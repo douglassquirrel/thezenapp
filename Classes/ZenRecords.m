@@ -1,0 +1,53 @@
+//
+//  ZenRecords.m
+//  zen
+//
+//  Created by J SCARBORO on 05/07/2012.
+//  Copyright (c) 2012 TheZenApp, Ltd. All rights reserved.
+//
+
+#import "ZenRecords.h"
+
+@implementation ZenRecords
+
+- (id)init {
+    if (!(self = [super init])) { return nil; }
+    
+    [self readRecords];
+    
+    return self;
+}
+
+- (void) readRecords
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *fileName = [documentsDirectory stringByAppendingPathComponent:@"zenlog.dat"];
+    
+    records = [[NSMutableArray alloc] initWithContentsOfFile: fileName];
+    if (records == nil) { records = [[NSMutableArray alloc] init]; }
+}
+
+-(void) timerUpdated:(NSString *) zenTimeString { 
+    NSString *now = [NSDateFormatter localizedStringFromDate:[NSDate date] 
+                                                   dateStyle:NSDateFormatterLongStyle 
+                                                   timeStyle:NSDateFormatterShortStyle];
+    NSString *record = [[NSString stringWithFormat:@"%@ -- %@", now, zenTimeString] retain];
+    [records insertObject:record atIndex:0];
+    if ([records count] >= 7) { [records removeObjectsInRange:NSMakeRange(6, records.count - 6)]; }
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *fileName = [documentsDirectory stringByAppendingPathComponent:@"zenlog.dat"];
+    [records writeToFile:fileName atomically:YES];
+}
+
+-(int) count                { return [records count]; }
+-(id)  recordAt:(int) index { return [records objectAtIndex:index]; }
+
+-(void) dealloc {
+    [records release];
+    [super dealloc];
+}
+
+@end

@@ -21,6 +21,9 @@
 		790BF12F158E0B610038321B /* ColourPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 790BF12E158E0B610038321B /* ColourPickerViewController.m */; };
 		790BF138158E23440038321B /* ColorPickerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 790BF137158E23440038321B /* ColorPickerImageView.m */; };
 		79528549158BD6F70094E203 /* Signaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 79528548158BD6F70094E203 /* Signaller.m */; };
+		79766AFE15A61541009ED240 /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79766AFC15A61541009ED240 /* LogViewController.m */; };
+		79766AFF15A61541009ED240 /* LogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79766AFD15A61541009ED240 /* LogViewController.xib */; };
+		79766B0215A625C1009ED240 /* ZenRecords.m in Sources */ = {isa = PBXBuildFile; fileRef = 79766B0115A625C1009ED240 /* ZenRecords.m */; };
 		7993B611158D04F10082E6DC /* MotionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993B610158D04F10082E6DC /* MotionDetector.m */; };
 		7993B615158D10F10082E6DC /* VisibilitySwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993B614158D10F10082E6DC /* VisibilitySwitch.m */; };
 		7993B619158D258B0082E6DC /* VisibleTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7993B618158D258B0082E6DC /* VisibleTimer.m */; };
@@ -61,6 +64,11 @@
 		794FF990158D723E0028B54E /* ZenningListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenningListener.h; sourceTree = "<group>"; };
 		79528547158BD6F70094E203 /* Signaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signaller.h; sourceTree = "<group>"; };
 		79528548158BD6F70094E203 /* Signaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Signaller.m; sourceTree = "<group>"; };
+		79766AFB15A61541009ED240 /* LogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogViewController.h; sourceTree = "<group>"; };
+		79766AFC15A61541009ED240 /* LogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogViewController.m; sourceTree = "<group>"; };
+		79766AFD15A61541009ED240 /* LogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LogViewController.xib; path = Classes/LogViewController.xib; sourceTree = "<group>"; };
+		79766B0015A625C0009ED240 /* ZenRecords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZenRecords.h; sourceTree = "<group>"; };
+		79766B0115A625C1009ED240 /* ZenRecords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZenRecords.m; sourceTree = "<group>"; };
 		7993B60F158D04F10082E6DC /* MotionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionDetector.h; sourceTree = "<group>"; };
 		7993B610158D04F10082E6DC /* MotionDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionDetector.m; sourceTree = "<group>"; };
 		7993B613158D10F10082E6DC /* VisibilitySwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisibilitySwitch.h; sourceTree = "<group>"; };
@@ -113,6 +121,8 @@
 				790BF137158E23440038321B /* ColorPickerImageView.m */,
 				790BF12D158E0B610038321B /* ColourPickerViewController.h */,
 				790BF12E158E0B610038321B /* ColourPickerViewController.m */,
+				79766AFB15A61541009ED240 /* LogViewController.h */,
+				79766AFC15A61541009ED240 /* LogViewController.m */,
 				7993B60F158D04F10082E6DC /* MotionDetector.h */,
 				7993B610158D04F10082E6DC /* MotionDetector.m */,
 				79528547158BD6F70094E203 /* Signaller.h */,
@@ -134,6 +144,8 @@
 				7993B618158D258B0082E6DC /* VisibleTimer.m */,
 				1D3623240D0F684500981E51 /* zenAppDelegate.h */,
 				1D3623250D0F684500981E51 /* zenAppDelegate.m */,
+				79766B0015A625C0009ED240 /* ZenRecords.h */,
+				79766B0115A625C1009ED240 /* ZenRecords.m */,
 				28D7ACF60DDB3853001CB0EB /* zenViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* zenViewController.m */,
 				794FF990158D723E0028B54E /* ZenningListener.h */,
@@ -176,6 +188,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				79766AFD15A61541009ED240 /* LogViewController.xib */,
 				790BF12B158E0AE00038321B /* ColourPicker.xib */,
 				79B1AA17158E6DC10093B460 /* ColourPickerImage.png */,
 				790BF129158E0AC30038321B /* ColourPickerImage.jpg */,
@@ -258,6 +271,7 @@
 				790BF12A158E0AC30038321B /* ColourPickerImage.jpg in Resources */,
 				790BF12C158E0AE00038321B /* ColourPicker.xib in Resources */,
 				79B1AA18158E6DC10093B460 /* ColourPickerImage.png in Resources */,
+				79766AFF15A61541009ED240 /* LogViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +297,8 @@
 				790BF123158DD14E0038321B /* Colourist.m in Sources */,
 				790BF12F158E0B610038321B /* ColourPickerViewController.m in Sources */,
 				790BF138158E23440038321B /* ColorPickerImageView.m in Sources */,
+				79766AFE15A61541009ED240 /* LogViewController.m in Sources */,
+				79766B0215A625C1009ED240 /* ZenRecords.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

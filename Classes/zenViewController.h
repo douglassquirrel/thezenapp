@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "ColourPickerViewController.h"
 #import "Colourist.h"
+#import "LogViewController.h"
 #import "MotionDetector.h"
 #import "Signaller.h"
 #import "Sound.h"
@@ -18,14 +19,16 @@
 #import "Tweeter.h"
 #import "VisibilitySwitch.h"
 #import "VisibleTimer.h"
+#import "ZenRecords.h"
 
-@interface zenViewController : UIViewController <ColourPickerDelegate>
+@interface zenViewController : UIViewController <ColourPickerDelegate, LogDelegate>
 {
 	IBOutlet UILabel *timerOutput;
 	IBOutlet UIButton *restartButton;
 	IBOutlet UIButton *tweetButton;
     ColourPickerViewController *colourPickerView;
-
+    LogViewController *logView;
+    
     @private
     Colourist *colourist;
     MotionDetector *motionDetector;
@@ -36,6 +39,7 @@
     Tweeter *tweeter;
     VisibilitySwitch *visibilitySwitch;
     VisibleTimer *visibleTimer;
+    ZenRecords *zenRecords;
 }
 
 - (IBAction) colours:(id) sender;

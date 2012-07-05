@@ -30,7 +30,6 @@ static int const TEMPORARY_TAG = 314;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults registerDefaults:newDefault];
     [defaults synchronize];
-    NSLog(@"baseColour stored as: %@", [defaults objectForKey:@"baseColour"]);
 }
 
 -(UIColor *) getPreferredColour

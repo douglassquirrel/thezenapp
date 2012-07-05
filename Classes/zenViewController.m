@@ -35,9 +35,11 @@
     timer = [[Timer alloc] init];
     tweeter = [[Tweeter alloc] init: self];
     visibleTimer = [[VisibleTimer alloc] init:timerOutput];
+    zenRecords = [[ZenRecords alloc] init];
     
     [timer addListener:visibleTimer];
     [timer addListener:tweeter];
+    [timer addListener:zenRecords];
     
     signaller = [[Signaller alloc] init];
     motionDetector = [[MotionDetector alloc] init:signaller];
@@ -66,6 +68,9 @@
 -(void) createViews {
     colourPickerView = [[ColourPickerViewController alloc] initWithNibName:@"ColourPicker" bundle:[NSBundle mainBundle]];
     colourPickerView.delegate = self;
+    logView = [[LogViewController alloc] initWithNibName:@"LogViewController" bundle: [NSBundle mainBundle]];
+    logView.delegate = self;
+    logView.records = zenRecords;
 }
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event     { [touchSensor process:touches forView:self.view]; }
@@ -79,6 +84,12 @@
     [self presentViewController:navigationController animated:YES completion: nil];
 }
 
+- (IBAction) log:(id)sender {
+    UINavigationController *navigationController = [[UINavigationController alloc]
+                                                    initWithRootViewController:logView];
+    [self presentViewController:navigationController animated:YES completion: nil];
+}
+
 - (IBAction) tweet:(id) sender    { [tweeter tweet];       }
 - (IBAction) zenAgain:(id) sender { [signaller becomeZen]; }
 
@@ -89,6 +100,11 @@
     if (nil == color) { return; }
     [colourist doColoursWithBase:color];
     [colourist applyColoursTo:[self view]];
+}
+
+-(void)closeLog
+{
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 - (void) stopping:(NSNotification *) notification { [signaller returnFromZen]; }
