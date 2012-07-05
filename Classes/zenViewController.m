@@ -21,6 +21,7 @@
     [self createViews];
 
     [self.view setMultipleTouchEnabled:YES];    
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopping:) name:UIApplicationWillResignActiveNotification object:nil];
     if (![tweeter canTweet]) { [tweetButton removeFromSuperview]; }
     [colourist applyColoursTo:[self view]];
