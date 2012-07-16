@@ -12,6 +12,7 @@
 @interface ZenRecords : NSObject <TimerListener>
 {    
     @private
+    NSString *fileName;
     NSMutableArray *records;
 }
 
