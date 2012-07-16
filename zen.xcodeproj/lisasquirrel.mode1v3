@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -252,7 +254,7 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 							<array>
-								<real>186</real>
+								<real>234</real>
 							</array>
 							<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 							<array>
@@ -272,13 +274,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>11</integer>
-									<integer>7</integer>
+									<integer>5</integer>
+									<integer>3</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {186, 436}}</string>
+							<string>{{0, 0}, {234, 436}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -290,11 +292,11 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {203, 454}}</string>
+						<string>{{0, 0}, {251, 454}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
-							<real>186</real>
+							<real>234</real>
 						</array>
 						<key>RubberWindowFrame</key>
 						<string>0 123 1024 495 0 0 1024 618 </string>
@@ -302,20 +304,18 @@
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
 					<key>Proportion</key>
-					<string>203pt</string>
+					<string>251pt</string>
 				</dict>
 				<dict>
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>zenAppDelegate.m</string>
+								<string>Colourist.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -323,16 +323,18 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>zenAppDelegate.m</string>
+										<string>Colourist.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A0D9D6981542E8FD003B3415</string>
+										<string>A048ACC715B4492300CE1EAB</string>
 										<key>history</key>
 										<array>
 											<string>A0C23A0A1542D6F2002628CA</string>
 											<string>A0D9D6971542E8FD003B3415</string>
-											<string>A0C23A191542DC52002628CA</string>
+											<string>A048ACC415B4492300CE1EAB</string>
+											<string>A048ACC515B4492300CE1EAB</string>
+											<string>A048ACC615B4492300CE1EAB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -344,14 +346,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {816, 282}}</string>
+								<string>{{0, 0}, {768, 99}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 123 1024 495 0 0 1024 618 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>282pt</string>
+							<string>99pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -364,18 +366,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 287}, {816, 167}}</string>
+								<string>{{0, 104}, {768, 350}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 123 1024 495 0 0 1024 618 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>167pt</string>
+							<string>350pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>816pt</string>
+					<string>768pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -390,9 +392,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>A0D9D6851542E74C003B3415</string>
+				<string>A048ACC815B4492300CE1EAB</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>A0D9D6861542E74C003B3415</string>
+				<string>A048ACC915B4492300CE1EAB</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -530,10 +532,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>A0C2396E1542C0A6002628CA</string>
-		<string>/Users/lisasquirrel/Documents/SquirrelDocuments/Development/iPhone/zen/zen/zen.xcodeproj</string>
+		<string>/Users/lisasquirrel/Documents/SquirrelDocuments/Development/iPhone/thezenapp/zen.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 123 1024 495 0 0 1024 618 </string>
@@ -613,7 +614,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>A0C2396E1542C0A6002628CA</string>
-				<string>A0D9D68A1542E74C003B3415</string>
+				<string>A048ACCA15B4492300CE1EAB</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -657,8 +658,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {316, 194}}</string>
-											<string>{{316, 0}, {378, 194}}</string>
+											<string>{{0, 0}, {316, 198}}</string>
+											<string>{{316, 0}, {378, 198}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -673,8 +674,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {694, 194}}</string>
-											<string>{{0, 194}, {694, 187}}</string>
+											<string>{{0, 0}, {694, 198}}</string>
+											<string>{{0, 198}, {694, 183}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -707,7 +708,7 @@
 										<real>148</real>
 									</array>
 									<key>Frame</key>
-									<string>{{316, 0}, {378, 194}}</string>
+									<string>{{316, 0}, {378, 198}}</string>
 									<key>RubberWindowFrame</key>
 									<string>80 171 694 422 0 0 1024 618 </string>
 								</dict>
@@ -735,13 +736,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>A0D9D6991542E8FD003B3415</string>
+				<string>A048ACCB15B4492300CE1EAB</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>A0D9D69A1542E8FD003B3415</string>
-				<string>A0D9D69B1542E8FD003B3415</string>
-				<string>A0D9D69C1542E8FD003B3415</string>
-				<string>A0D9D69D1542E8FD003B3415</string>
-				<string>A0D9D69E1542E8FD003B3415</string>
+				<string>A048ACCC15B4492300CE1EAB</string>
+				<string>A048ACCD15B4492300CE1EAB</string>
+				<string>A048ACCE15B4492300CE1EAB</string>
+				<string>A048ACCF15B4492300CE1EAB</string>
+				<string>A048ACD015B4492300CE1EAB</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>

@@ -2,11 +2,15 @@
 //  ZenRecords.m
 //  zen
 //
-//  Created by J SCARBORO on 05/07/2012.
+//  Created by Douglas Squirrel on 05/07/2012.
 //  Copyright (c) 2012 TheZenApp, Ltd. All rights reserved.
 //
 
 #import "ZenRecords.h"
+
+@interface ZenRecords()
+-(void) readRecords;
+@end
 
 @implementation ZenRecords
 

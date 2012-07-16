@@ -13,6 +13,10 @@
 static double const UPDATE_INTERVAL = 1.0/30.0;
 static double const MOVEMENT_LIMIT = 0.35;
 
+@interface MotionDetector()
+- (Vector *) toVector:(UIAcceleration *) acceleration;
+@end
+
 @implementation MotionDetector
 
 - (id)init:(Signaller *)theSignaller {

@@ -9,6 +9,10 @@
 #import <AVFoundation/AVFoundation.h>
 #import "Sound.h"
 
+@interface Sound()
+- (void)createAudioPlayer;
+@end
+
 @implementation Sound
 
 - (id)init {

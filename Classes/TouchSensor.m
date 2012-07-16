@@ -11,6 +11,11 @@
 static int const TEMPORARY_TAG = 314;
 static int const RADIUS = 75;
 
+@interface TouchSensor()
+-(UIView *) addCircleAt:(CGPoint*) centre;
+-(void) animate:(UIView *)circle;
+@end
+
 @implementation TouchSensor
 
 -(id) init:(Colourist *) theColourist {

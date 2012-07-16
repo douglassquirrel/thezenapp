@@ -2,7 +2,7 @@
 //  ZenRecords.h
 //  zen
 //
-//  Created by J SCARBORO on 05/07/2012.
+//  Created by Douglas Squirrel on 05/07/2012.
 //  Copyright (c) 2012 TheZenApp, Ltd. All rights reserved.
 //
 

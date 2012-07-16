@@ -10,6 +10,16 @@
 
 static int const TEMPORARY_TAG = 314;
 
+@interface Colourist()
+-(void) registerColourDefault;
+-(UIColor *) getPreferredColour;
+-(NSDictionary *) serialize: (UIColor *) colour;
+-(UIColor *) deserialize: (NSDictionary *) serializedColour;
+-(UIColor *) textColourFor: (UIColor *) colour;
+-(UIColor *) complementOf: (UIColor *) colour;
+-(UIColor *) opaqueVersionOf: (UIColor *) colour;
+@end
+
 @implementation Colourist
 
 -(id) init 
@@ -56,7 +66,8 @@ static int const TEMPORARY_TAG = 314;
                 [NSNumber numberWithDouble:alpha],      @"alpha",      nil];
 }
 
--(UIColor *) deserialize: (NSDictionary *)serializedColour {    
+-(UIColor *) deserialize: (NSDictionary *)serializedColour 
+{    
     float hue        = [(NSNumber *)[serializedColour objectForKey:@"hue"]        floatValue];
     float saturation = [(NSNumber *)[serializedColour objectForKey:@"saturation"] floatValue];
     float brightness = [(NSNumber *)[serializedColour objectForKey:@"brightness"] floatValue];

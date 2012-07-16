@@ -8,6 +8,12 @@
 
 #import "zenViewController.h"
 
+@interface zenViewController()
+- (void)assemble;
+-(void) configureButtons;
+-(void) createViews;
+@end
+
 @implementation zenViewController
 
 - (void)viewDidLoad {

@@ -10,6 +10,10 @@
 
 static int const TEMPORARY_TAG = 314;
 
+@interface VisibilitySwitch()
+-(BOOL) isTemporary:(UIView *)view;
+@end
+
 @implementation VisibilitySwitch
 
 -(id) init:(UIView *)theView
